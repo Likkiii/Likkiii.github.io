@@ -632,7 +632,7 @@ section .container {
 --------------------------------------------------------------*/
 .contact .info-box {
   color: #444444;
-  padding: 20px;
+  padding: 30px;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
 }
@@ -647,7 +647,7 @@ section .container {
 }
 
 .contact .info-box h3 {
-  font-size: 20px;
+  font-size: 26px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
   margin: 10px 0 8px 68px;
@@ -657,7 +657,7 @@ section .container {
   padding: 0;
   color: #fff;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0 0 0 68px;
 }
 
