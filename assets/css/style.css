@@ -374,7 +374,7 @@ section .container {
   height: 1px;
   display: inline-block;
   background: #4ceb95;
-  margin: 4px 10px;
+  margin: 5px 10px;
 }
 
 .section-title p {
