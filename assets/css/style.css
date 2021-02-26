@@ -403,6 +403,7 @@ section .container {
 
 .about-me .content ul li {
   padding-bottom: 10px;
+  font-size: 18px;
 }
 
 .about-me .content ul i {
@@ -632,14 +633,14 @@ section .container {
 --------------------------------------------------------------*/
 .contact .info-box {
   color: #444444;
-  padding: 20px;
+  padding: 30px;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
 }
 
 .contact .info-box i.bx {
   font-size: 24px;
-  color: #18d26e;
+  color: white;
   border-radius: 50%;
   padding: 14px;
   float: left;
@@ -647,8 +648,8 @@ section .container {
 }
 
 .contact .info-box h3 {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  color: #35e888;
   font-weight: 700;
   margin: 10px 0 8px 68px;
 }
@@ -657,8 +658,20 @@ section .container {
   padding: 0;
   color: #fff;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0 0 0 68px;
+}
+
+.contact .info-box .mail a{
+  color: #fff;
+  margin-top: 5cm;
+  font-size: 22px;
+  margin-left: 1.6cm;
+}
+
+
+.contact .info-box .mail a:hover{
+  color: #43eb91;
 }
 
 .contact .info-box .social-links {
@@ -667,12 +680,13 @@ section .container {
 }
 
 .contact .info-box .social-links a {
-  font-size: 18px;
+  font-size: 22px;
   display: inline-block;
   color: #fff;
   line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
+  margin-top: 0.45cm;
 }
 
 .contact .info-box .social-links a:hover {
@@ -809,80 +823,6 @@ section .container {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow-y: auto;
-}
-
-.portfolio-details .container {
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-
-.portfolio-details .portfolio-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
-  margin-top: 5px;
-  text-align: center;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #18d26e !important;
-}
-
-.portfolio-details .portfolio-info {
-  padding-top: 45px;
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-info p {
-  font-size: 15px;
-  padding: 15px 0 0 0;
-}
-
-@media (max-width: 992px) {
-  .portfolio-details .portfolio-info {
-    padding-top: 20px;
   }
 }
 
