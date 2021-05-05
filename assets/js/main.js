@@ -59,6 +59,47 @@
     }
   });
 
+  //Typing effect with erase animation
+  const words = ["Coder.", "Web Developer.", "Team Player.", "Dancer.", "Sprinter."];
+  let i = 0;
+  let timer;
+
+  function typingEffect() {
+    let word = words[i].split("");
+    var loopTyping = function() {
+      if (word.length > 0) {
+        document.getElementById('word').innerHTML += word.shift();
+      } else {
+        deletingEffect();
+        return false;
+      };
+      timer = setTimeout(loopTyping, 200);
+    };
+    loopTyping();
+  };
+
+  setInterval(function deletingEffect() {
+    let word = words[i].split("");
+    var loopDeleting = function() {
+      if (word.length > 0) {
+        word.pop();
+        document.getElementById('word').innerHTML = word.join("");
+      } else {
+        if (words.length > (i + 1)) {
+          i++;
+        } else {
+          i = 0;
+        };
+        typingEffect();
+        return false;
+      };
+      timer = setTimeout(loopDeleting, 100);
+    };
+    loopDeleting();
+  }, 4100);
+
+  typingEffect();
+
   // Activate/show sections on load with hash links
   if (window.location.hash) {
     var initial_nav = window.location.hash;

@@ -28,6 +28,19 @@ body::before {
   z-index: -1;
 }
 
+/*Typing effect*/
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  to { opacity: .0; }
+}
+
+.flex{
+  display: inline;
+}
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
@@ -91,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header h2 span {
   color: #fff;
-  border-bottom: 2px solid #18d26e;
+  /*border-bottom: 2px solid #18d26e;*/
   padding-bottom: 6px;
 }
 
@@ -539,7 +552,7 @@ section .container {
 }
 
 .resume .resume-item p em{
-  color: #73bbff;
+  color: #58aef5;
 }
 
 .resume .resume-item p{
@@ -556,12 +569,13 @@ section .container {
 .section-title1 h2{
   font-size: 26px;
   font-weight: 500;
-  padding: 0;
+  padding: 0px;
   line-height: 1px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgb(161, 161, 161);
   font-family: "Poppins", sans-serif;
+  margin-bottom: -7px;
 }
 
 .resume .resume-item h4 {
@@ -588,12 +602,20 @@ section .container {
   text-transform: uppercase;
 }
 
+.resume .resume-item .header7{
+  color:rgb(235, 115, 35);
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;  
+  margin: 0px 0px 5px 0px; 
+}
+
 .resume .resume-item ul {
   padding-left: 20px;
 }
 
-.resume .resume-item ul li {
-  padding-bottom: 0px;
+.resume .resume-item .sports li{
+  padding-bottom: 10px;
 }
 
 .resume .resume-item ul.sports{
@@ -826,6 +848,31 @@ section .container {
   }
 }
 
+@media (max-width: 767px){
+
+  .contact .info-box{
+    padding: 0px;
+    margin-left: -50px;
+  }
+
+  .contact .info-box h3{
+    font-size: 20px;
+  }
+
+  .contact .info-box .mail a{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 300px){
+  .contact .info-box h3{
+    font-size: 15px;
+  }
+
+  .contact .info-box .mail a{
+    font-size: 15px;
+  }
+}
 /*--------------------------------------------------------------
 # Credits
 --------------------------------------------------------------*/
