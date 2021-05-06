@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -4px;
   left: 0;
   background-color: #18d26e;
-  visibility: hidden;
+  visibility: visible;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -260,10 +260,13 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
-  font-weight: 500;
+  font-weight: 600;
   outline: none;
+  text-align: center;
+  line-height: 75px;
+  font-size: 25px;
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
@@ -429,6 +432,15 @@ section .container {
   margin-bottom: 0;
 }
 
+.about-me .content .para {
+  font-size: 17px;
+}
+
+@media (max-width:768px) {
+  .about-me .content .email-id {
+    font-size: 16.5px;
+  }
+}
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
