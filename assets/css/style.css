@@ -33,11 +33,13 @@ body::before {
   animation: blink 1s infinite;
 }
 
-@keyframes blink{
-  to { opacity: .0; }
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
 }
 
-.flex{
+.flex {
   display: inline;
 }
 
@@ -56,7 +58,12 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -86,13 +93,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header h1 a{
+#header h1 a {
   color: #18d26e;
   line-height: 1;
   display: inline-block;
 }
 
-#header h1 a:hover{
+#header h1 a:hover {
   color: #43eb91;
 }
 
@@ -204,12 +211,16 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .active > a:before {
   visibility: visible;
   width: 40px;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
   color: #fff;
   text-decoration: none;
 }
@@ -269,7 +280,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 25px;
 }
 
-.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+.mobile-nav a:hover,
+.mobile-nav .active > a,
+.mobile-nav li:hover > a {
   color: #18d26e;
   text-decoration: none;
 }
@@ -310,7 +323,8 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.9);
 }
 
-#header.header-top .social-links, #header.header-top h2 {
+#header.header-top .social-links,
+#header.header-top h2 {
   display: none;
 }
 
@@ -436,7 +450,7 @@ section .container {
   font-size: 17px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .about-me .content .email-id {
     font-size: 16.5px;
   }
@@ -513,7 +527,7 @@ section .container {
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: .9s;
+  transition: 0.9s;
   background-color: #18d26e;
 }
 
@@ -559,15 +573,15 @@ section .container {
 }
 
 .resume .resume-item p,
-.resume .resume-item h5{
+.resume .resume-item h5 {
   display: inline-block;
 }
 
-.resume .resume-item p em{
+.resume .resume-item p em {
   color: #58aef5;
 }
 
-.resume .resume-item p{
+.resume .resume-item p {
   padding-bottom: 0px;
 }
 
@@ -578,7 +592,7 @@ section .container {
   position: relative;
 }
 
-.section-title1 h2{
+.section-title1 h2 {
   font-size: 26px;
   font-weight: 500;
   padding: 0px;
@@ -609,34 +623,34 @@ section .container {
   margin-bottom: 20px;
 }
 
-.resume .resume-item h6{
+.resume .resume-item h6 {
   font-family: sans-serif;
   text-transform: uppercase;
 }
 
-.resume .resume-item .header7{
-  color:rgb(253, 72, 72);
+.resume .resume-item .header7 {
+  color: rgb(253, 72, 72);
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;  
-  margin: 0px 0px 5px 0px; 
+  font-size: 20px;
+  margin: 0px 0px 5px 0px;
 }
 
 .resume .resume-item ul {
   padding-left: 20px;
 }
 
-.resume .resume-item .sports li{
+.resume .resume-item .sports li {
   padding-bottom: 10px;
 }
 
-.resume .resume-item ul.sports{
+.resume .resume-item ul.sports {
   list-style: none;
 }
 
-.resume .resume-item ul.sports li::before{
+.resume .resume-item ul.sports li::before {
   content: "✨";
-  color:#ed3c0d;
+  color: #ed3c0d;
   display: inline-block;
   width: 2em;
   margin-left: -1.5em;
@@ -658,7 +672,7 @@ section .container {
   border: 2px solid #18d26e;
 }
 
-.resume .resume-item .Projects a h4:hover{
+.resume .resume-item .Projects a h4:hover {
   color: #43eb91;
 }
 
@@ -696,15 +710,14 @@ section .container {
   margin: 0 0 0 68px;
 }
 
-.contact .info-box .mail a{
+.contact .info-box .mail a {
   color: #fff;
   margin-top: 5cm;
   font-size: 22px;
   margin-left: 1.6cm;
 }
 
-
-.contact .info-box .mail a:hover{
+.contact .info-box .mail a:hover {
   color: #43eb91;
 }
 
@@ -782,7 +795,8 @@ section .container {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -792,31 +806,37 @@ section .container {
   color: #fff;
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
   background-color: rgba(255, 255, 255, 0.11);
 }
 
-.contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
+.contact .php-email-form input::-webkit-input-placeholder,
+.contact .php-email-form textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
 
-.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
+.contact .php-email-form input::-moz-placeholder,
+.contact .php-email-form textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
 
-.contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
+.contact .php-email-form input:-ms-input-placeholder,
+.contact .php-email-form textarea:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
 
-.contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
+.contact .php-email-form input::-ms-input-placeholder,
+.contact .php-email-form textarea::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
 
-.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.3);
   opacity: 1;
 }
@@ -860,28 +880,27 @@ section .container {
   }
 }
 
-@media (max-width: 767px){
-
-  .contact .info-box{
+@media (max-width: 767px) {
+  .contact .info-box {
     padding: 0px;
     margin-left: -50px;
   }
 
-  .contact .info-box h3{
+  .contact .info-box h3 {
     font-size: 20px;
   }
 
-  .contact .info-box .mail a{
+  .contact .info-box .mail a {
     font-size: 20px;
   }
 }
 
-@media (max-width: 300px){
-  .contact .info-box h3{
+@media (max-width: 300px) {
+  .contact .info-box h3 {
     font-size: 15px;
   }
 
-  .contact .info-box .mail a{
+  .contact .info-box .mail a {
     font-size: 15px;
   }
 }
