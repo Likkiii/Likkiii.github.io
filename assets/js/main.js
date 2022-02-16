@@ -1,102 +1,117 @@
 /**
-* Template Name: Personal - v2.5.1
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-!(function($) {
+ * Template Name: Personal - v2.5.1
+ * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
+!(function ($) {
   "use strict";
 
   // Nav Menu
-  $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  $(document).on("click", ".nav-menu a, .mobile-nav a", function (e) {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
       var hash = this.hash;
       var target = $(hash);
       if (target.length) {
         e.preventDefault();
 
-        if ($(this).parents('.nav-menu, .mobile-nav').length) {
-          $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-          $(this).closest('li').addClass('active');
+        if ($(this).parents(".nav-menu, .mobile-nav").length) {
+          $(".nav-menu .active, .mobile-nav .active").removeClass("active");
+          $(this).closest("li").addClass("active");
         }
 
-        if (hash == '#header') {
-          $('#header').removeClass('header-top');
-          $("section").removeClass('section-show');
-          if ($('body').hasClass('mobile-nav-active')) {
-            $('body').removeClass('mobile-nav-active');
-            $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-            $('.mobile-nav-overly').fadeOut();
+        if (hash == "#header") {
+          $("#header").removeClass("header-top");
+          $("section").removeClass("section-show");
+          if ($("body").hasClass("mobile-nav-active")) {
+            $("body").removeClass("mobile-nav-active");
+            $(".mobile-nav-toggle i").toggleClass(
+              "icofont-navigation-menu icofont-close"
+            );
+            $(".mobile-nav-overly").fadeOut();
           }
           return;
         }
 
-        if (!$('#header').hasClass('header-top')) {
-          $('#header').addClass('header-top');
-          setTimeout(function() {
-            $("section").removeClass('section-show');
-            $(hash).addClass('section-show');
-
+        if (!$("#header").hasClass("header-top")) {
+          $("#header").addClass("header-top");
+          setTimeout(function () {
+            $("section").removeClass("section-show");
+            $(hash).addClass("section-show");
           }, 350);
         } else {
-          $("section").removeClass('section-show');
-          $(hash).addClass('section-show');
+          $("section").removeClass("section-show");
+          $(hash).addClass("section-show");
         }
 
-        $('html, body').animate({
-          scrollTop: 0
-        }, 350);
+        $("html, body").animate(
+          {
+            scrollTop: 0,
+          },
+          350
+        );
 
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-          $('.mobile-nav-overly').fadeOut();
+        if ($("body").hasClass("mobile-nav-active")) {
+          $("body").removeClass("mobile-nav-active");
+          $(".mobile-nav-toggle i").toggleClass(
+            "icofont-navigation-menu icofont-close"
+          );
+          $(".mobile-nav-overly").fadeOut();
         }
 
         return false;
-
       }
     }
   });
 
   //Typing effect with erase animation
-  const words = ["Coder.", "Web Developer.", "Team Player.", "Dancer.", "Sprinter."];
+  const words = [
+    "Techie.",
+    "Web Developer.",
+    "Sprinter.",
+    "Team Player.",
+    "Dancer.",
+  ];
   let i = 0;
   let timer;
 
   function typingEffect() {
     let word = words[i].split("");
-    var loopTyping = function() {
+    var loopTyping = function () {
       if (word.length > 0) {
-        document.getElementById('word').innerHTML += word.shift();
+        document.getElementById("word").innerHTML += word.shift();
       } else {
         deletingEffect();
         return false;
-      };
+      }
       timer = setTimeout(loopTyping, 200);
     };
     loopTyping();
-  };
+  }
 
-  setInterval(function deletingEffect() {
+  function deletingEffect() {
     let word = words[i].split("");
-    var loopDeleting = function() {
+    var loopDeleting = function () {
       if (word.length > 0) {
         word.pop();
-        document.getElementById('word').innerHTML = word.join("");
+        document.getElementById("word").innerHTML = word.join("");
       } else {
-        if (words.length > (i + 1)) {
+        if (words.length > i + 1) {
           i++;
         } else {
           i = 0;
-        };
+        }
         typingEffect();
         return false;
-      };
+      }
       timer = setTimeout(loopDeleting, 100);
     };
     loopDeleting();
-  }, 4100);
+  }
 
   typingEffect();
 
@@ -104,38 +119,47 @@
   if (window.location.hash) {
     var initial_nav = window.location.hash;
     if ($(initial_nav).length) {
-      $('#header').addClass('header-top');
-      $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-      $('.nav-menu, .mobile-nav').find('a[href="' + initial_nav + '"]').parent('li').addClass('active');
-      setTimeout(function() {
-        $("section").removeClass('section-show');
-        $(initial_nav).addClass('section-show');
+      $("#header").addClass("header-top");
+      $(".nav-menu .active, .mobile-nav .active").removeClass("active");
+      $(".nav-menu, .mobile-nav")
+        .find('a[href="' + initial_nav + '"]')
+        .parent("li")
+        .addClass("active");
+      setTimeout(function () {
+        $("section").removeClass("section-show");
+        $(initial_nav).addClass("section-show");
       }, 350);
     }
   }
 
   // Mobile Navigation
-  if ($('.nav-menu').length) {
-    var $mobile_nav = $('.nav-menu').clone().prop({
-      class: 'mobile-nav d-lg-none'
+  if ($(".nav-menu").length) {
+    var $mobile_nav = $(".nav-menu").clone().prop({
+      class: "mobile-nav d-lg-none",
     });
-    $('body').append($mobile_nav);
-    $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
-    $('body').append('<div class="mobile-nav-overly"></div>');
+    $("body").append($mobile_nav);
+    $("body").prepend(
+      '<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>'
+    );
+    $("body").append('<div class="mobile-nav-overly"></div>');
 
-    $(document).on('click', '.mobile-nav-toggle', function(e) {
-      $('body').toggleClass('mobile-nav-active');
-      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-      $('.mobile-nav-overly').toggle();
+    $(document).on("click", ".mobile-nav-toggle", function (e) {
+      $("body").toggleClass("mobile-nav-active");
+      $(".mobile-nav-toggle i").toggleClass(
+        "icofont-navigation-menu icofont-close"
+      );
+      $(".mobile-nav-overly").toggle();
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       var container = $(".mobile-nav, .mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-          $('.mobile-nav-overly').fadeOut();
+        if ($("body").hasClass("mobile-nav-active")) {
+          $("body").removeClass("mobile-nav-active");
+          $(".mobile-nav-toggle i").toggleClass(
+            "icofont-navigation-menu icofont-close"
+          );
+          $(".mobile-nav-overly").fadeOut();
         }
       }
     });
@@ -146,17 +170,20 @@
   // jQuery counterUp
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
-    time: 1000
+    time: 1000,
   });
 
   // Skills section
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
+  $(".skills-content").waypoint(
+    function () {
+      $(".progress .progress-bar").each(function () {
+        $(this).css("width", $(this).attr("aria-valuenow") + "%");
+      });
+    },
+    {
+      offset: "80%",
+    }
+  );
 
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
@@ -165,39 +192,38 @@
     loop: true,
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       768: {
-        items: 2
+        items: 2,
       },
       900: {
-        items: 3
-      }
-    }
+        items: 3,
+      },
+    },
   });
 
   // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows'
+  $(window).on("load", function () {
+    var portfolioIsotope = $(".portfolio-container").isotope({
+      itemSelector: ".portfolio-item",
+      layoutMode: "fitRows",
     });
 
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
+    $("#portfolio-flters li").on("click", function () {
+      $("#portfolio-flters li").removeClass("filter-active");
+      $(this).addClass("filter-active");
 
       portfolioIsotope.isotope({
-        filter: $(this).data('filter')
+        filter: $(this).data("filter"),
       });
     });
-
   });
 
   // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
-    $('.venobox').venobox({
-      'share': false
+  $(document).ready(function () {
+    $(".venobox").venobox({
+      share: false,
     });
   });
 
@@ -206,7 +232,6 @@
     autoplay: true,
     dots: true,
     loop: true,
-    items: 1
+    items: 1,
   });
-
 })(jQuery);
